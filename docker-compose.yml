@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+    mymongo:
+        image: "mongo"
+        ports:
+            - 27017:27017
+
+    mynode:
+        build: .
+        ports:
+            - "3000:3000"
+        environment:
+            YOUTUBE_API_KEYS: ${YOUTUBE_API_KEYS}
+            YOUTUBE_SEARCH_QUERY: ${YOUTUBE_SEARCH_QUERY}
+            MONGODB_URL: ${MONGODB_URL}
+   
+    mongo-express:
+        image: mongo-express
+        ports:
+            - 8081:8081
+        # depends_on:
+        #     - mongo

@@ -22,7 +22,7 @@ getRefreshedList = () => {
         err
       );
     }
-    console.log("Ruuning Job in every 10 seconds");
+    console.log("Running Job in every 10 seconds");
   });
 };
 

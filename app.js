@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const getRefreshedList = require("./jobs/getVideoList");
-//require("dotenv").config();
 
 app.use(express.json());
 app.listen(process.env.PORT || 3000);
@@ -17,7 +16,7 @@ mongoose
     console.log("db connected");
   })
   .catch((err) => {
-    console.log(error);
+    //console.log(error);
     console.log("db connection error");
   });
 
