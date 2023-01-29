@@ -1,7 +1,7 @@
 # YT-Project
 
 ### Clone the project
-open terminal and paste git clone git@github.com:Ayush11139/YT-Project.git
+open terminal and paste ```git clone git@github.com:Ayush11139/YT-Project.git```
 
 ### Google API key
 1. Go to Google developers console
