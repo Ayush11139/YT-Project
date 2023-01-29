@@ -1,5 +1,6 @@
 const videomodel = require("../models/videoModel");
 
+// Function to call the list on the basis of pageNumber
 module.exports.getVideoList = async function getVideoList(req, res) {
   try {
     const pageNumber = req.params.pageNumber - 1;

@@ -9,6 +9,7 @@ const videoRouter = require("./routers/videoRouter");
 
 app.use("/", videoRouter);
 
+// Database connection
 const db_link = process.env.MONGODB_URL;
 mongoose
   .connect(db_link)
@@ -20,4 +21,5 @@ mongoose
     console.log("db connection error");
   });
 
+// Cron job
 getRefreshedList();

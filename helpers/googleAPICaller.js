@@ -1,9 +1,11 @@
 const { google } = require("googleapis");
+
+//Making an array from string of keys seperated by comma to later use it in for loop.
 const googleAPIKeys = process.env.YOUTUBE_API_KEYS.split(",");
 
+// Function where data will be called from google API. For loop will run until we get the data from one of the valid API keys
 module.exports.getVidoesFromYoutube = async () => {
   for (const apiKey in googleAPIKeys) {
-    console.log(googleAPIKeys[apiKey], "Hi");
     let flag = false;
     try {
       if (flag) {
@@ -47,7 +49,6 @@ module.exports.getVidoesFromYoutube = async () => {
           return list;
         } else {
           console.log("Vidoes not available");
-          //return [];
         }
       }
     } catch (err) {

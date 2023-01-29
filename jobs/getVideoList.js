@@ -2,6 +2,7 @@ const cron = require("node-cron");
 const { getVidoesFromYoutube } = require("../helpers/googleAPICaller");
 const videoModel = require("../models/videoModel");
 
+// This function will execute after every 10 seconds. It basically calls data from google and saves in our database
 getRefreshedList = () => {
   cron.schedule("*/10 * * * * *", async () => {
     try {
